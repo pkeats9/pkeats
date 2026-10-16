@@ -1,0 +1,14 @@
+{
+  "name": "pkeats",
+  "version": "2.0.0",
+  "private": true,
+  "description": "PK Eats storefront — order food, pay with your balance, track it here.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node dev/server.mjs",
+    "dev:mock": "node dev/server.mjs --mock",
+    "dev:offline": "node dev/server.mjs --offline",
+    "icons": "node tools/icons.mjs"
+  }
+}

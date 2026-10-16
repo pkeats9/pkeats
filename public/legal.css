@@ -1,0 +1,43 @@
+/* PK Eats — legal pages (Terms, Privacy). Restyles the existing markup in the storefront's design; the text is unchanged. */
+:root {
+  color-scheme: dark;
+  --sf: -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bg: #000; --tile: #1d1d1f; --label: #f5f5f7; --label-2: #86868b; --label-3: #6e6e73;
+  --separator: rgba(84, 84, 88, .6); --link: #2997ff; --fill-3: rgba(118, 118, 128, .12);
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--label); font: 400 17px/1.4706 var(--sf); letter-spacing: -0.022em; -webkit-font-smoothing: antialiased; }
+header, main, footer { width: 100%; max-width: 732px; margin: 0 auto; padding-inline: 22px; }
+header { position: sticky; top: 0; z-index: 2; padding-top: 14px; padding-bottom: 14px; background: rgba(0, 0, 0, .72); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); }
+header a { display: inline-flex; align-items: center; font: 700 22px/1 var(--sf); letter-spacing: -0.03em; color: var(--label); text-decoration: none; }
+header a::before { content: ""; width: 30px; height: 30px; margin-right: 10px; background: url("/icon.svg?v=3") center / contain no-repeat; }
+header a span { background: linear-gradient(135deg, #c2b8ff, #a99cf5 55%, #93a9f3); -webkit-background-clip: text; background-clip: text; color: transparent; }
+main { padding-top: 40px; padding-bottom: 72px; animation: rise .8s var(--ease-out) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); filter: blur(6px); } }
+h1 { font-size: 48px; line-height: 1.0834; font-weight: 600; letter-spacing: -0.003em; margin: 0 0 10px; }
+.updated { color: var(--label-2); font-size: 14px; margin: 0 0 32px; }
+h2 { font-size: 24px; line-height: 1.1667; font-weight: 600; letter-spacing: .009em; margin: 44px 0 12px; scroll-margin-top: 80px; }
+p, li { color: rgba(245, 245, 247, .86); font-size: 17px; }
+p { margin: 0 0 16px; }
+b, strong { color: var(--label); font-weight: 600; }
+ul, ol { padding-left: 22px; margin: 0 0 16px; }
+li { margin-bottom: 8px; }
+li::marker { color: var(--label-3); }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid #0071e3; outline-offset: 2px; border-radius: 4px; }
+.toc { display: grid; margin: 0 0 12px; border-radius: 18px; background: var(--tile); overflow: hidden; font-size: 15px; }
+.toc a { position: relative; display: block; padding: 13px 18px; color: var(--label); text-decoration: none; transition: background-color .24s; }
+.toc a + a::before { content: ""; position: absolute; top: 0; left: 18px; right: 0; height: .5px; background: var(--separator); }
+.toc a::after { content: "›"; position: absolute; right: 18px; color: var(--label-3); transition: transform .24s var(--ease-out); }
+.toc a:hover { background: rgba(255, 255, 255, .04); text-decoration: none; }
+.toc a:hover::after { transform: translateX(3px); }
+.callout { padding: 16px 18px; border-radius: 18px; background: rgba(255, 146, 48, .1); }
+.fill { background: rgba(255, 214, 0, .14); color: #ffd600; border-radius: 6px; padding: 0 5px; }
+footer { display: flex; flex-wrap: wrap; gap: 8px 20px; padding-top: 24px; padding-bottom: 48px; border-top: 1px solid var(--separator); color: var(--label-2); font-size: 14px; }
+footer a { color: var(--label-2); }
+footer a:hover { color: var(--label); }
+@media (max-width: 734px) { h1 { font-size: 32px; } h2 { font-size: 21px; } header, main, footer { padding-inline: 16px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } main { animation: none; } }

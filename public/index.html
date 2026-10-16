@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<title>PK Eats — Your food. Your balance. One place.</title>
+<meta name="description" content="Order food with PK Eats. Browse restaurants, pay with your balance, and track your order in one place.">
+<link rel="preconnect" href="https://wonder-image.wonder.com" crossorigin>
+<link rel="icon" href="/icon.svg?v=3" type="image/svg+xml">
+<link rel="stylesheet" href="/app.css?v=1">
+<script type="module" src="/js/main.js?v=1"></script>
+</head>
+<body data-screen="start">
+<a class="skip" href="#app">Skip to content</a>
+<svg class="sprite" aria-hidden="true" focusable="false"><!-- PK Eats brand mark (from icon.svg) --><defs><linearGradient id="pkm-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14132a"/><stop offset="1" stop-color="#0b0b16"/></linearGradient><linearGradient id="pkm-pk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c2b8ff"/><stop offset=".55" stop-color="#a99cf5"/><stop offset="1" stop-color="#93a9f3"/></linearGradient></defs><symbol id="pk-mark" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="url(#pkm-bg)"/><rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#b4a8f7" stroke-opacity=".28" stroke-width="1.5"/><path d="M14 17h12c15 0 15 22 0 22h-4v10h-8zm8 8v7h4c5 0 5-7 0-7zm19-8h8v13l8-13h7L53 33l11 16h-9l-6-10v10h-8z" fill="url(#pkm-pk)"/></symbol></svg>
+<!-- icons:start --><svg class="sprite" aria-hidden="true" focusable="false"><!-- Lucide (lucide.dev, ISC), fetched with /svg; regenerate with tools/icons.mjs --><symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></g></symbol><symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></symbol><symbol id="i-back" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></g></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></g></symbol><symbol id="i-x" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></g></symbol><symbol id="i-plus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></g></symbol><symbol id="i-minus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></g></symbol><symbol id="i-bag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></g></symbol><symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></symbol><symbol id="i-star" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></g></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></g></symbol><symbol id="i-cookie" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17h.01"/><path d="M11.496 2c.324-.016.558.292.529.615a4 4 0 004.235 4.368.713.713 0 01.758.757 4 4 0 004.366 4.237c.323-.03.63.204.614.527a10 10 0 01-2.915 6.566A1 1 0 114.93 4.918 10 10 0 0111.496 2"/><path d="M12 12h.01"/><path d="M16 16h.01"/><path d="M16 3h.01"/><path d="M21 4h.01"/><path d="M21 8h.01"/><path d="M7 14h.01"/><path d="M9 8h.01"/></g></symbol><symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></g></symbol><symbol id="i-external" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></g></symbol><symbol id="i-info" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></g></symbol><symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></g></symbol><symbol id="i-utensils" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></g></symbol><symbol id="i-search-x" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m13.5 8.5-5 5"/><path d="m8.5 8.5 5 5"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></g></symbol><symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></g></symbol><symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></g></symbol></svg><!-- icons:end -->
+
+<!-- ── floating functional layer ─────────────────────────────────── -->
+<header class="chrome" id="chrome">
+  <button class="g-circle glass press-glass back-btn" id="backBtn" type="button" aria-label="Back" hidden><svg class="i" aria-hidden="true"><use href="#i-back"/></svg></button>
+  <a class="wordmark" href="/" id="homeLink" aria-label="PK Eats home"><svg class="pk-mark" aria-hidden="true"><use href="#pk-mark"/></svg><b>PK</b><span>Eats</span></a>
+  <button class="g-capsule glass press-glass addr-chip" id="addrChip" type="button" aria-label="Change address"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span class="chip-text"><span class="chip-kind" id="addrChipKind">Pickup</span> · <span id="addrChipText"></span></span></button>
+  <span class="chrome-spacer"></span>
+  <button class="g-capsule glass press-glass order-live collapse-sm" id="orderStatusBtn" type="button" hidden><span class="dot" aria-hidden="true"></span><span class="cap-text" id="orderStatusText">Order status</span></button>
+  <button class="g-capsule glass press-glass acct-btn collapse-sm" id="accountBtn" type="button"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg><span class="cap-text" id="accountText">Sign in</span></button>
+</header>
+<div class="edge edge-top" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<main id="app" tabindex="-1">
+
+  <!-- ── start ─────────────────────────────────────────────────────── -->
+  <section class="screen start" id="screenStart" aria-labelledby="heroTitle">
+    <div class="wrap">
+      <div class="hero" id="hero">
+        <div class="wall" id="wall" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="lockup fade-up" style="--d:40ms"><svg class="pk-mark" aria-hidden="true"><use href="#pk-mark"/></svg><span class="wordmark lg" aria-label="PK Eats"><b>PK</b><span>Eats</span></span><span class="lockup-tag" id="welcome">Food, sorted.</span></p>
+          <h1 class="t-super hero-title split" id="heroTitle" aria-label="Your cravings. Handled."><span class="w" aria-hidden="true"><span style="--i:0">Your</span></span> <span class="w" aria-hidden="true"><span style="--i:1">cravings.</span></span><br><span class="w" aria-hidden="true"><span style="--i:2">Handled.</span></span></h1>
+          <p class="t-intro hero-intro fade-up" style="--d:420ms">Find your food, make it yours, and pay with your <b>PK Eats balance</b>. From the first bite to your doorstep, it’s all here.</p>
+
+          <form class="order fade-up" id="orderForm" style="--d:540ms" autocomplete="off" novalidate>
+            <div class="seg" id="diningSeg" role="radiogroup" aria-label="Order type">
+              <button class="seg-opt" type="button" role="radio" data-dining="DELIVERY" aria-checked="true">Delivery</button>
+              <button class="seg-opt" type="button" role="radio" data-dining="PICKUP" aria-checked="false">Pickup</button>
+              <span class="seg-thumb" aria-hidden="true"></span>
+            </div>
+            <div class="addr-pill" id="addrPill" style="width:100%">
+              <svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>
+              <input id="addrInput" type="text" inputmode="text" autocomplete="off" spellcheck="false"
+                     placeholder="Enter your delivery address" aria-label="Delivery address" enterkeyhint="search"
+                     role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="addrSuggest">
+              <button class="btn btn-primary find-btn" id="findBtn" type="submit"><span class="btn-label">Find food</span></button>
+              <div class="suggest glass glass-thick" id="addrSuggest" role="listbox" aria-label="Address suggestions" hidden></div>
+            </div>
+            <button class="btn btn-primary btn-block find-sm" id="findBtnSm" type="submit"><span class="btn-label">Find food</span></button>
+            <p class="order-note" id="pickupNote" hidden>We’ll use this to find nearby stores. Your order will be <b>pickup</b>.</p>
+            <p class="order-status" id="startStatus" role="status" hidden></p>
+            <p class="order-err" id="startErr" role="alert" hidden></p>
+            <div class="order-links">
+              <span class="live-line" id="liveLine"><span class="dot off" aria-hidden="true"></span><span id="liveText">Connecting to PK Eats…</span></span>
+              <button class="link-btn" id="lookupOpen" type="button"><svg class="i" aria-hidden="true"><use href="#i-ticket"/></svg>Have a cart code? Look it up<svg class="i chev" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <section class="steps" aria-labelledby="stepsTitle">
+        <h2 class="t-headline steps-title rv" id="stepsTitle">How it works.</h2>
+        <ol class="steps-list">
+          <li class="step rv" style="--d:0ms"><span class="step-n" aria-hidden="true">1</span><h3>Enter your address</h3><p>We find the kitchens that serve you, for pickup or delivery.</p></li>
+          <li class="step rv" style="--d:70ms"><span class="step-n" aria-hidden="true">2</span><h3>Pick a restaurant and your food</h3><p>Every menu and every option, made exactly how you like it.</p></li>
+          <li class="step rv" style="--d:140ms"><span class="step-n" aria-hidden="true">3</span><h3>Pay with your balance</h3><p>One easy checkout with your PK Eats balance.</p></li>
+          <li class="step rv" style="--d:210ms"><span class="step-n" aria-hidden="true">4</span><h3>Track your order here</h3><p>Live status from the kitchen to you, right on this page.</p></li>
+        </ol>
+      </section>
+
+      <footer class="foot">
+        <div class="foot-top">
+          <span>Your favorites. One easy checkout.</span>
+          <button class="cookie" id="fortuneCookie" type="button" aria-label="Open a fortune cookie" title="A little something for you"><svg class="i" aria-hidden="true"><use href="#i-cookie"/></svg></button>
+          <span class="fortune" id="fortune" role="status" hidden></span>
+        </div>
+        <nav class="foot-links" aria-label="Legal and support">
+          <a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="mailto:pkeats9@gmail.com">Support: pkeats9@gmail.com</a>
+        </nav>
+        <p>PK Eats is an independent ordering service and is not affiliated with Wonder or any restaurant. Restaurant names and photos belong to their owners.</p>
+        <p>© 2026 PK Eats</p>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ── restaurants ───────────────────────────────────────────────── -->
+  <section class="screen browse" id="screenBrowse" aria-labelledby="browseTitle" hidden>
+    <div class="wrap">
+      <div class="screen-head">
+        <h1 class="t-headline screen-title" id="browseTitle" tabindex="-1">Restaurants near you</h1>
+        <div class="browse-tools" id="browseTools">
+          <label class="search">
+            <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+            <input id="storeSearch" type="search" placeholder="Search restaurants and cuisines" aria-label="Search restaurants" enterkeyhint="search" autocomplete="off" spellcheck="false">
+            <button class="search-clear" type="button" data-clear="storeSearch" aria-label="Clear search" hidden><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
+          </label>
+          <div class="browse-bar">
+            <div class="seg" id="filterSeg" role="radiogroup" aria-label="Restaurant type">
+              <button class="seg-opt" type="button" role="radio" data-filter="all" aria-checked="true">All restaurants</button>
+              <button class="seg-opt" type="button" role="radio" data-filter="wonder" aria-checked="false">Wonder</button>
+              <span class="seg-thumb" aria-hidden="true"></span>
+            </div>
+            <button class="switch" type="button" id="openNowToggle" role="switch" aria-checked="false"><span>Open now</span><span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span></button>
+          </div>
+        </div>
+        <p class="count" id="restaurantCount" role="status" aria-live="polite"></p>
+      </div>
+      <div class="grid" id="storeGrid"></div>
+      <div class="empty" id="storeEmpty" hidden></div>
+    </div>
+  </section>
+
+  <!-- ── menu ──────────────────────────────────────────────────────── -->
+  <section class="screen menu" id="screenMenu" aria-labelledby="menuName" hidden>
+    <div class="wrap">
+      <div class="store-hero" id="storeHero">
+        <div class="store-cover" id="menuCover"></div>
+        <div class="store-id">
+          <div class="store-logo" id="menuLogo"></div>
+          <h1 class="t-headline" id="menuName" tabindex="-1"></h1>
+          <div class="store-meta" id="menuMeta"></div>
+          <p class="t-intro store-desc" id="menuDesc" hidden></p>
+          <div class="store-where" id="menuAddr" hidden></div>
+          <p class="store-status" id="menuStatus" role="status" hidden></p>
+          <button class="link-btn" type="button" id="menuChangeAddr">Change address<svg class="i chev" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+        </div>
+      </div>
+      <label class="search menu-search">
+        <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="itemSearch" type="search" placeholder="Search the menu" aria-label="Search the menu" enterkeyhint="search" autocomplete="off" spellcheck="false">
+        <button class="search-clear" type="button" data-clear="itemSearch" aria-label="Clear search" hidden><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
+      </label>
+      <div class="stick-sentinel" id="toolsSentinel" aria-hidden="true"></div>
+      <div class="menu-tools" id="menuTools">
+        <nav class="catnav glass" id="catNav" aria-label="Menu categories" hidden></nav>
+      </div>
+      <div class="menu-body" id="menuBody"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- floating cart: the one tinted control while ordering -->
+<button class="cartbar glass glass-tint press-glass" id="cartbar" type="button" hidden>
+  <span class="cartbar-bag" id="cartBag"><span class="bag-ico" id="cartBagIco"></span><span class="cartbar-count" id="cartCount">0</span></span>
+  <span class="cartbar-label">View cart</span>
+  <span class="cartbar-total" id="cartTotal"></span>
+</button>
+<div class="edge edge-bottom" aria-hidden="true"><i></i><i></i></div>
+
+<!-- one sheet surface for every overlay (item, cart, cart code, look-up, account, checkout, tracking) -->
+<div class="layer" id="layer" hidden>
+  <div class="scrim" id="scrim"></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" tabindex="-1">
+    <div class="sheet-grip" id="sheetGrip" aria-hidden="true"></div>
+    <button class="sheet-close" id="sheetClose" type="button" aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
+    <div class="sheet-views" id="sheetViews"></div>
+  </div>
+</div>
+
+<div class="toast glass glass-thick" id="toast" role="status" aria-live="polite" hidden></div>
+<div class="vh" id="announcer" aria-live="polite"></div>
+</body>
+</html>
